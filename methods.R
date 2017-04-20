@@ -50,7 +50,7 @@ minsplit = 30
 cp = 0.001
 method = "anova"
 
-output.decisionTree = rpart(loss~., data=train_,control=rpart.control(minsplit=minsplit, cp=0.001),method=method)
+output.decisionTree = rpart(loss~., data=train_,control=rpart.control(minsplit=minsplit, cp=cp),method=method)
 
 plot(output.decisionTree, uniform=TRUE, main="Classification Tree for Kyphosis")
 text(output.decisionTree, use.n=TRUE, all=TRUE, cex=.8)
